@@ -75,6 +75,7 @@ function removeFromCart(item) {
     }
   }
   
+  // Exited for loop with nothing
   console.log(`That item is not in your cart`);
   
   return cart;
