@@ -70,7 +70,7 @@ function removeFromCart(item) {
   
   if (cartLen > 0){
     for (var i = 0; i < cartLen; i++){
-      console.log(cart);
+      console.log(cart[i]);
       
       if (item in cart[i]){
         cart.splice(i, 1);
