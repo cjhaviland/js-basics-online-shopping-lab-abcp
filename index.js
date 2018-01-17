@@ -68,12 +68,14 @@ function removeFromCart(item) {
   // write your code here
   let cartLen = cart.length;
   
-  for (var i = 0; i < cartLen; i++){
-    if (cart[i].hasOwnProperty(item)){
-      cart.splice(i, 1);
-    }
-    else{
-      console.log(`That item is not in your cart`);
+  if (cartLen > 0){
+    for (var i = 0; i < cartLen; i++){
+      if (item in cart[i]){
+        cart.splice(i, 1);
+      }
+      else{
+        console.log(`That item is not in your cart`);
+      }
     }
   }
   
